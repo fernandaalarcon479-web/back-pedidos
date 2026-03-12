@@ -1,0 +1,43 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "start": "node src/index.js",
+  "dev": "nodemon src/index.js",
+  "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+  "lint": "eslint src"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongodb": "^7.1.0",
+    "mongoose": "^9.2.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.4.3",
+    "@commitlint/config-conventional": "^20.4.3",
+    "cross-env": "^10.1.0",
+    "eslint": "^10.0.2",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "jest": "^30.2.0",
+    "lint-staged": "^16.3.2",
+    "mongodb-memory-server": "^11.0.1",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.8.1"
+  },
+  "jest": {
+  "testEnvironment": "node",
+  "globalSetup": "./src/tests/globalSetup.js",
+  "globalTeardown": "./src/tests/globalTeardown.js",
+  "setupFilesAfterEnv": ["./src/tests/setupFileAfterEnv.js"]
+}
+}
